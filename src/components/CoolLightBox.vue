@@ -162,7 +162,8 @@
                 :data-autoplay="setAutoplay(itemIndex)"
                 class="cool-lightbox-video" 
                 v-if="checkIsMp4(getItemSrc(itemIndex)) || getMediaType(itemIndex) === 'webVideo'" 
-                :style="aspectRatioVideo" :key="checkIsMp4(getItemSrc(itemIndex))" 
+                :style="aspectRatioVideo" :key="checkIsMp4(getItemSrc(itemIndex))"
+                loop 
                 poster="">
                 <source :src="checkIsMp4(getItemSrc(itemIndex))" :type="'video/'+(getVideoExt(getItemSrc(itemIndex)) ? getVideoExt(getItemSrc(itemIndex)) : getExtFromItem(itemIndex))">
                 Sorry, your browser doesn't support embedded videos
@@ -261,7 +262,8 @@
                     v-autoplayObserver
                     :data-autoplay="setAutoplay(imgIndex)"
                     v-if="checkIsMp4(getItemSrc(imgIndex)) || getMediaType(imgIndex) === 'webVideo'" 
-                    :style="aspectRatioVideo" :key="checkIsMp4(getItemSrc(imgIndex))"  
+                    :style="aspectRatioVideo" :key="checkIsMp4(getItemSrc(imgIndex))"
+                    loop  
                     poster="">
                     <source :src="checkIsMp4(getItemSrc(imgIndex))" :type="'video/'+(getVideoExt(getItemSrc(imgIndex)) ? getVideoExt(getItemSrc(imgIndex)) : getExtFromItem(imgIndex))">
                     Sorry, your browser doesn't support embedded videos
